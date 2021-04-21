@@ -111,9 +111,9 @@ function createMap(quakes){
 
     var labelsColorHtml =  "<ul>" + labelsColor.join("") + "</ul>";
     var labelsTextHtml = `<div id="labels-text">${labelsText.join("<br>")}</div>`;
-  
+    
     var legendInfo = "<h4>Earthquake<br>Magnitude</h4>" +
-      "<div class=\"labels\">" + labelsColorHtml + labelsTextHtml
+      "<div class=\"labels\">" + labelsColorHtml + labelsTextHtml +
       "</div>";
     div.innerHTML = legendInfo;
   
