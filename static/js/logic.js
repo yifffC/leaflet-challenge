@@ -1,10 +1,9 @@
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
-//  GET color radius call to the query URL
 d3.json(queryUrl).then(function(data) {
     //console.log(data.features);
 
-    // set different color from magnitude
+    // set color
     function getColor(magnitude) {
     switch (true) {
     case magnitude > 5:
@@ -21,7 +20,7 @@ d3.json(queryUrl).then(function(data) {
       return "#98ee00";
     }
   }
-  // set radiuss from magnitude
+  // set radius
     function getRadius(magnitude) {
     if (magnitude === 0) {
       return 1;
